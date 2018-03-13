@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-83806060-4');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>@Page.Title - Akira Web Solutions</title>
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+    <body>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="~/Default.cshtml">
+                        
+                        <img src="~/Images/NOTWATERMARKED_Akira_web_solution_Graphic_2_edit.png" style="width:196px;"/>
+                    </a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="~/Default.cshtml">Home</a>
+                        </li>
+                        <li>
+                            <a href="~/About.cshtml">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Services</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="~/Web Development.cshtml">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="~/Web Development.cshtml#Responsive Web Design">Responsive Web Design</a>
+                                </li>
+                                @*<li>
+                                    <a href="~/Graphic Design.cshtml">Graphic Design</a>
+                                </li>*@
+                                <li>
+                                    <a href="~/Web Development.cshtml#SEO">Search Engine Optimization</a>
+                                </li>
+                                @*<li>
+                                    <a href="~/Web Hosting.cshtml">Web Hosting</a>
+                                </li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="~/Pricing.cshtml">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Portfolio</a>
+                            <ul class="nav-dropdown">
+                               
+                                <li>
+                                    <a href="~/Web Development Porfolio.cshtml">Web Development</a>
+                                </li>
+                                @*<li>
+                                    <a href="#!">Graphic Design</a>
+                                </li>*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="~/Contact.cshtml">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+                <div>
+                    <p class="textSection" style="font-size:26px;">
+                        <br />   <br />   <br />   <br />   <br />   <br />   <br /><hr />
+                        Akira Web Solutions is an established web development company in Arizona, with clients throughout the US.
+
+                        Call us for website design, development, graphic design services, and responsive web design for mobile-friendly websites.
+
+                        Don't pay for over priced web designers when you can have the professional quality and national experience right here for less with Akira Web Solutions.
+                    </p>
+                    
+                </div>
+            </section>
+        </div>
+        <footer>
+
+            <div class="content-wrapper">
+
+                <div class="float-left">
+                    <ul class="sitemap">
+                        <li>
+                            <a href="~/Default.cshtml">Home</a>
+                        </li>
+                        <li>
+                            <a href="~/About.cshtml">About</a>
+                        </li>
+                        <li>
+                            <a href="~/Web Development.cshtml">Web Development</a>
+                        </li>
+                        <li>
+                            <a href="~/Web Development.cshtml#Responsive Web Design">Responsive Web Design</a>
+                        </li>
+                    </ul>
+
+                    <ul class="sitemap">
+                        <li>
+                            <a href="~/Web Development.cshtml#SEO">Search Engine Optimization</a>
+                        </li>
+                        <li>
+                            <a href="~/Pricing.cshtml">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="~/Portfolio.cshtml">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="~/Contact.cshtml">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="float-right">
+                <a href="https://www.facebook.com/Akira-Web-Solutions-189302461673713/">
+                    <img src="~/Images/facebook.png" style="max-height:64px; max-width:258px;" />
+                </a>
+                <a href="https://twitter.com/Akira_WebDev">
+                    <img src="~/Images/twitter.png" style="max-height:64px; max-width:64px;" />
+                </a>
+
+                <a href="https://www.instagram.com/akirawebsolutions/">
+                    <img src="~/Images/instagram.png" style="max-height:64px; max-width:64px;" />
+                </a>
+                <p>&copy; @DateTime.Now.Year - Akira Web Solutions. all websites made with CSS3, HTML5, Javascript, and SQL. </p>
+            </div>
+        </footer>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
+
+<script>(function ($) { // Begin jQuery
+        $(function () { // DOM ready
+            // If a link has a dropdown, add sub menu toggle.
+            $('nav ul li a:not(:only-child)').click(function (e) {
+                $(this).siblings('.nav-dropdown').toggle();
+                // Close one dropdown when selecting another
+                $('.nav-dropdown').not($(this).siblings()).hide();
+                e.stopPropagation();
+            });
+            // Clicking away from dropdown will remove the dropdown class
+            $('html').click(function () {
+                $('.nav-dropdown').hide();
+            });
+            // Toggle open and close nav styles on click
+            $('#nav-toggle').click(function () {
+                $('nav ul').slideToggle();
+            });
+            // Hamburger to X toggle
+            $('#nav-toggle').on('click', function () {
+                this.classList.toggle('active');
+            });
+        }); // end DOM ready
+    })(jQuery); // end jQuery</script>
+
+
+<style> ul.sitemap{
+     display:inline-block;   
+ }
+    a:link, a:visited, a:active, a:hover{
+        color:white;
+    }
+</style>

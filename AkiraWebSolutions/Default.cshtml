@@ -1,0 +1,157 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    <meta name="keywords" content="web designer in Arizona, online store designer Tempe, responsive web design Mesa, graphic designer Chandler, Buckeye County website company, mobile apps Gilbert, social media services Tuscon area, web hosting Phoenix" />
+    <meta name="author" content="Taylor Bishop" />
+    <meta name="description" content="Akira Web Solutions; website design and graphic design company in Phoenix, Arizona. Why pay overpriced web design prices - we do the same for less." />
+    <title>Website design Phoenix AZ, graphic design, web hosting, responsive websites</title>
+    Page.Title = "Home";
+}
+
+
+
+<div class="containmentTest">
+    <div class="container" id="container" style="padding: 0 0px;">
+        <ul>
+
+            <li class="active"><img src="~/Images/Autum view.jpg" style="width:100%; height:538px;" alt="" /></li>
+            <li><img src="~/Images/2.jpg" style="width:100%; height:538px;" alt="" /></li>
+            <li><img src="~/Images/cat.jpg" style="width:100%; height:538px;" alt="" /></li>
+            <li><img src="~/Images/beach.jpg" style="width:100%; height:538px;" alt="" /></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<hr />
+<h1 class="textSection">Akira Web Solutions</h1>
+<hr />
+<div>
+    <p class="textSection">
+        Finding the ideal website design company or graphic designer for your business can be tricky, so at Akira Web Solutions, we make it as easy as possible.<br /><br />
+
+        We offer expert, affordable web design, SEO, website hosting and graphic design services for any size business or organisation. We also make your website mobile friendly for the 40% of customers who access websites on the move!<br /><br />
+
+        You tell us what you want, we listen carefully, offer suggestions and options on how to achieve it, then make it happen within your budget and on time.<br /><br />
+
+        We're the web solutions company you will want to work with, we'll stick within your budget, and you can call us direct for an update, help or advice. Our web design company is based in Arizona and our experienced team have worked with national companies in the US.<br /><br />
+
+        In other words, we create a great looking website for your business or organisation which works amazing on smart phones and ranks well in Google.<br /><br />
+
+        If that sounds like just what you need, give Akira Web Solutions a call at (602) 777-1105 or send us an <a href="mailto:akirawebsolutions0@gmail.com" style="color:black;">email.</a><br /><br />
+    </p>
+</div>
+
+
+<style>
+
+    #body {
+        background-color: lightcyan;
+        font-size:18px;
+    }
+
+
+    .container {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+        .container span {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: absolute;
+        }
+
+        .container ul, .container li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .container li {
+            display: none;
+        }
+
+            .container li.active {
+                display: inline;
+            }
+</style>
+
+<script>
+    $(document).ready(function () {
+        var width = 1680;
+        height = 538;
+        var numberOfBlinds = 20;
+        var margin = 2;
+        var color = '#000';
+        gapHeight = 100;
+
+        var container = $('#container');
+
+        container.width(width).height(height);
+        var blindWidth = width / numberOfBlinds;
+
+        images = new Array();
+        $('ul li', container).each(function () {
+            images.push($(this));
+        });
+
+        images[0].addClass('active');
+        activeImage = 0;
+
+        for (var i = 0; i < numberOfBlinds; i++) {
+            var tempEl = $(document.createElement('span'));
+            var borders = calculateBorders();
+
+            tempEl.css({
+                'left': i * blindWidth,
+                border: margin + 'px solid ' + color,
+                borderTop: borders.borderWidthTop + 'px solid ' + color,
+                borderBottom: borders.borderWidthBottom + 'px solid ' + color,
+                'height': height,
+                'width': blindWidth
+            });
+
+            container.prepend(tempEl);
+        };
+
+        blinds = $('span', container);
+        setTimeout(animateBorders, 1000);
+
+    });
+
+    function calculateBorders() {
+        var random = Math.floor((Math.random() * 9) + 1);
+        var borderWidthTop = (random / 10) * gapHeight;
+        var borderWidthBottom = gapHeight - borderWidthTop;
+
+        return { borderWidthTop: borderWidthTop, borderWidthBottom: borderWidthBottom };
+    }
+
+    function animateBorders() {
+        var changeOccuredOnce = false;
+
+        blinds.animate({
+            borderTopWidth: height / 2,
+            borderBottomWidth: height / 2
+        }, 1000, function () {
+            if (!changeOccuredOnce) {
+                images[activeImage].removeClass('active');
+                activeImage = (activeImage + 1) % images.length;
+                images[activeImage].addClass('active');
+                setTimeout(animateBorders, 3000);
+                changeOccuredOnce = true;
+            }
+
+            var borders = calculateBorders();
+
+            $(this).delay(300).animate({
+                borderTopWidth: borders.borderWidthTop,
+                borderBottomWidth: borders.borderWidthBottom
+            }, 1000);
+        });
+    }
+</script>

@@ -1,0 +1,184 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    <meta name="keywords" content="website design studio Phoenix, web developer near Scottsdale, design studio Tempe, alternative to Chandler web designer, website design company America, website design companies Arizona, mobile-friendly website designers, responsive web design examples" />
+    <meta name="author" content="Tayor Bishop" />
+    <meta name="description" content="Vibrant web design by Akira Web Solutions: browse our affordable, sleek website designs. Phoenix, Arizona, USA" />
+    <title>Akira Web Solutions website design portfolio, web design Phoenix, web development, mobile apps AZ</title>
+    Page.Title = "Web Development Portfolio";
+
+}
+<br />
+@*ANIMATION HEADER*@
+<h1 style="text-align:center;">
+    &nbsp; Clients:
+    <span class="txt-rotate"
+          data-period="2000"
+          data-rotate='[ "Nel$on Gang", "Bishop Fine Plumbing", "Spazztastiq Games","Papa Dueceski Design","Zombie Road", "Your Company Here!" ]'></span>
+</h1>
+<hr />
+<br />
+
+
+@*WEBSITE PREVIEWS*@
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="~/Images/nelsonpreview.PNG" alt="Jane" style="width:100%">
+            <div class="container">
+                <h2>Nel$on Gang</h2>
+                <p class="title">Music, Entertainment, Social Media</p>
+                <p>This is a clients website that highlights and promotes their music career.</p>
+                <p>Call Now (602) 777-1105</p>
+                <p><button class="button" onclick="window.open('http://www.nelsongangordie.com')">View Website</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Images/BishopFinePlumbingSnip.PNG" alt="Bishop Fine Plumbing Preview" style="width:100%">
+
+            <div class="container">
+                <h2>Bishop Fine Plumbing</h2>
+                <p class="title">Plumbing, Service, Business</p>
+                <p>This is a clients website that highlights their services for sale.</p>
+                <p>Call Now (602) 777-1105</p>
+                <p><button class="button" onclick="window.open('http://www.bishopfineplumbing.com')">View Website</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+
+            <img src="~/Images/David A.Simpson Preview.PNG" alt="John" style="width:100%">
+            <div class="container">
+                <h2>David A. Simpson</h2>
+                <p class="title">Author, Store, Entertainment</p>
+                <p>This is a clients website that highlights and promotes their writing career.</p>
+                <p>Call Now (602) 777-1105</p>
+                @*<p><button class="button" onclick="window.open('http://www.papadueceski.com')">View Website</button></p>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="~/Images/SpazztastiqGamesPreview.PNG" alt="Jane" style="width:100%">
+            <div class="container">
+                <h2>Spazztastiq Games</h2>
+                <p class="title">App Development, Zombie Road, Social Media</p>
+                <p>This is a clients website that highlights and promotes their app company.</p>
+                <p>Call Now (602) 777-1105</p>
+                <p><button class="button" onclick="window.open('http://spazztastiqgames.azurewebsites.net/')">View Website</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Images/Papapreview.PNG" alt="Bishop Fine Plumbing Preview" style="width:100%">
+
+            <div class="container">
+                <h2>Papa Dueceski</h2>
+                <p class="title">Plumbing, Service, Business</p>
+                <p>This is a clients website that highlights their graphic design portfolio.</p>
+                <p>Call Now (602) 777-1105</p>
+                @*<p><button class="button" onclick="window.open('http://www.bishopfineplumbing.com')">View Website</button></p>*@
+            </div>
+        </div>
+    </div>
+    @*<div class="column">
+            <div class="card">
+
+                <img src="~/Images/David A.Simpson Preview.PNG" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Papa Dueceski</h2>
+                    <p class="title">Music, Entertainment, Social Media</p>
+                    <p>This is a clients website that highlights and promotes his music career.</p>
+                    <p>Call Now (602) 777-1105</p>
+                    <p><button class="button" onclick="window.open('http://www.papadueceski.com')">View Website</button></p>
+                </div>
+            </div>
+        </div>*@
+</div>
+
+<style>
+    #body {
+        background-image: url('Images/CoffeeCat.png');
+        background-size: cover;
+    }
+
+
+    /*Animated header css*/
+
+    #container {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<script>
+
+    //ANIMATION HEADER SCRIPT
+    var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+</script>
