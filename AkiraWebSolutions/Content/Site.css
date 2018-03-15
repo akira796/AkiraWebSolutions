@@ -330,57 +330,7 @@ aside {
     font-weight: 700;
 }
 
-/* login page */
-#loginForm {
-    border-right: solid 2px #c8c8c8;
-    float: left;
-    width: 55%;
-}
 
-    #loginForm .validation-error {
-        display: block;
-        margin-left: 15px;
-    }
-
-    #loginForm .validation-summary-errors ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    #loginForm .validation-summary-errors li {
-        display: inline;
-        list-style: none;
-        margin: 0;
-    }
-
-    #loginForm input {
-        width: 250px;
-    }
-
-    #loginForm input[type="checkbox"],
-    #loginForm input[type="submit"],
-    #loginForm input[type="button"],
-    #loginForm button {
-        width: auto;
-    }
-
-#socialLoginForm {
-    margin-left: 40px;
-    float: left;
-    width: 40%;
-}
-
-    #socialLoginForm h2 {
-        margin-bottom:  5px;
-    }
-
-#socialLoginList button {
-    margin-bottom: 12px;
-}
-
-#logoutForm {
-    display: inline;
-}
 
 /* contact */
 .contact h3 {
@@ -607,41 +557,10 @@ tr.pager td {
         text-align: center;
     }
 
-    /* login */
-    #login {
-        font-size: .85em;
-        margin: 0 0 12px;
-        text-align: center;
-    }
-
-        #login ul {
-            margin: 5px 0;
-            padding: 0;
-        }
-
-        #login li {
-            display: inline;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        #login a {
-            background: none;
-            color: #999;
-            font-weight: 600;
-            margin: 2px;
-            padding: 0;
-        }
-
-        #login a:hover {
-            color: #333;
-        }
+    
 
     /* menu */
-    nav {
-        /*margin-bottom: 5px;*/
-    }
+   
 
     ul#menu {
         margin: 0;
@@ -662,10 +581,7 @@ tr.pager td {
         background-position: 10px 0;
     }
 
-    .content-wrapper {
-        /*padding-right: 10px;
-        padding-left: 10px;*/
-    }
+    
 
     .featured .content-wrapper {
         padding: 10px;
@@ -787,7 +703,7 @@ a.textSection {
     color: #008CBA;
 }
 
-@charset "UTF-8";
+
 /*nav css*/
 .navigation {
     height: 80px;
@@ -980,7 +896,6 @@ article {
     padding: 10px;
 }
 /*meet the team css*/
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
 
 body {
     font-family: 'Aleo-Bold';
@@ -1135,10 +1050,6 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-}
-
-.row {
-    /*padding-top:125px;*/
 }
 
 .column {
