@@ -707,13 +707,14 @@ a.textSection {
 /*nav css*/
 .navigation {
     height: 80px;
-    background: #262626;
+    background-color: black;
     color:silver;
 }
 
 .brand {
     position: absolute;
     padding-left: 50px;
+    
     float: left;
     line-height: 70px;
     text-transform: uppercase;
@@ -751,7 +752,7 @@ nav {
                 display: block;
                 padding: 0 20px;
                 line-height: 70px;
-                background: #262626;
+                background: black;
                 color: white;
                 text-decoration: none;
             }

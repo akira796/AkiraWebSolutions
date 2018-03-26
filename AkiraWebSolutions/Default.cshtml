@@ -6,42 +6,46 @@
     <title>Website design Phoenix AZ, graphic design, web hosting, responsive websites</title>
     Page.Title = "Home";
 }
-    <style>
+<style>
+    .processTitle{
+        text-align:center;
+        font-size:24px;
+    }
+    #body {
+        background-color: lightcyan;
+        font-size: 24px;
+    }
 
-        #body {
-            background-color: lightcyan;
-            font-size: 18px;
+
+    .container {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+        .container span {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: absolute;
         }
 
-
-        .container {
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            max-width: 100%;
+        .container ul, .container li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
         }
 
-            .container span {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                position: absolute;
+        .container li {
+            display: none;
+        }
+
+            .container li.active {
+                display: inline;
             }
 
-            .container ul, .container li {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-            }
-
-            .container li {
-                display: none;
-            }
-
-                .container li.active {
-                    display: inline;
-                }
-    </style>
+</style>
 
 
 <div class="containmentTest">
@@ -63,24 +67,31 @@
 <hr />
 <div>
     <p class="textSection">
-        Finding the ideal website design company or graphic designer for your business can be tricky, so at Akira Web Solutions, we make it as easy as possible.<br /><br />
+        Finding the ideal website design company for your business can be tricky, so at Akira Web Solutions, we make it as easy as possible.<br /><br />
 
-        We offer expert, affordable web design, SEO, website hosting and graphic design services for any size business or organisation. We also make your website mobile friendly for the 40% of customers who access websites on the move!<br /><br />
+        We offer expert, affordable web design, SEO, website hosting and website development services for any size business or organization. We also make your website mobile friendly for the 40% of customers who access websites on the move!<br /><br />
 
         You tell us what you want, we listen carefully, offer suggestions and options on how to achieve it, then make it happen within your budget and on time.<br /><br />
 
         We're the web solutions company you will want to work with, we'll stick within your budget, and you can call us direct for an update, help or advice. Our web design company is based in Arizona and our experienced team have worked with national companies in the US.<br /><br />
 
-        In other words, we create a great looking website for your business or organisation which works amazing on smart phones and ranks well in Google.<br /><br />
+        In other words, we create a great looking website for your business or organization which works amazing on smart phones and ranks well in Google.<br /><br />
 
-        If that sounds like just what you need, give Akira Web Solutions a call at (602) 777-1105 or send us an <a href="mailto:akirawebsolutions0@gmail.com" style="color:black;">email.</a><br /><br />
+        If that sounds like just what you need, give Akira Web Solutions a call at <a href="tel:+16027771105" style="color:black; font-weight:bold;">(602) 777-1105</a> or send us an <a href="mailto:akirawebsolutions0@gmail.com" style="color:black; font-weight:bold;">email.</a><br /><br />
     </p>
 </div>
 
 
 
 
+<link href="css/alpha.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/alpha.min.js"></script>
+
+
 <script>
+
+
     $(document).ready(function () {
         var width = 1680;
         height = 538;
