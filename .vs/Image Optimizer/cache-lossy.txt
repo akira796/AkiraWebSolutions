@@ -1,0 +1,7 @@
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\facebook.png|38755
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\Fineplumbingpreview.PNG|232062
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\Logo.png|10065
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\bullet.png|134
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\sslcertificate-2.png|12550
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\heroAccent.png|376
+C:\Users\Steve\source\repos\AkiraWebSolutions\AkiraWebSolutions\Images\twitter.png|16548

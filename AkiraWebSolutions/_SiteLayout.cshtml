@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>*@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -12,7 +12,7 @@
     </script>
 
     <meta charset="utf-8" />
-    <title>@Page.Title - Akira Web Solutions</title>
+    @*<title>@Page.Title - Akira Web Solutions</title>*@
     <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -21,181 +21,199 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <meta name="viewport" content="width=device-width" />
 </head>
-    <body>
-        <section class="navigation">
-            <div class="nav-container">
-                <div class="brand">
-                    <a href="~/Default.cshtml">
-                        
-                        <img src="~/Images/AkiraLogoMock2.png" style="width:124px;"/>
-                    </a>
-                </div>
-                <nav>
-                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="~/Default.cshtml">Home</a>
-                        </li>
-                        <li>
-                            <a href="~/About.cshtml">About</a>
-                        </li>
-                        <li>
-                            <a href="#!">Services</a>
-                            <ul class="nav-dropdown">
-                                <li>
-                                    <a href="~/Web Development.cshtml">Web Development</a>
-                                </li>
-                                <li>
-                                    <a href="~/Web Development.cshtml#Responsive Web Design">Responsive Web Design</a>
-                                </li>
-                                
-                                <li>
-                                    <a href="~/Web Development.cshtml#SEO">Search Engine Optimization</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="~/Pricing.cshtml">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#!">Portfolio</a>
-                            <ul class="nav-dropdown">
-                               
-                                <li>
-                                    <a href="~/Web Development Portfolio.cshtml">Web Development</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="~/Contact.cshtml">Contact</a> 
-                        </li>
-                        <li><a href="tel:+16027771105"><img src="~/Images/Phonepng.png" style="max-width:32px;" /></a></li>
-                    </ul>
-                </nav>
+
+<body>
+    <style>
+        ul.sitemap {
+            display: inline-block
+        }
+
+        a:active, a:hover, a:link, a:visited {
+            color: #fff
+        }
+
+        .footersocial {
+            text-align: center;
+            padding-right: 15%;
+            max-height: 100%
+        }
+    </style>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="~/Default" title=" Home - SEO, Website Design, Website Building">
+
+                    <img src="~/Images/AkiraLogoMock3.png" alt="Akira Logo" style="width:124px;" />
+                </a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!" title="Expand"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="~/Default" title=" Home - SEO, Website Design, Website Building">Home</a>
+                    </li>
+                    <li>
+                        <a href="~/About" title="About Our Website Design Team">About</a>
+                    </li>
+                    <li>
+                        <a href="#!" title="Expand">Services</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="~/WebDevelopment" title="Website Development Information">Website Development</a>
+                            </li>
+                            <li>
+                                <a href="~/WebDevelopment#Responsive Web Design" title="Responsive Website Design Information">Responsive Website Design</a>
+                            </li>
+
+                            <li>
+                                <a href="~/WebDevelopment#SEO" title="SEO Website Information">Search Engine Optimization</a>
+                            </li>
+                            <li>
+                                <a href="~/WebDevelopment#ASP" title="ASP.NET Website Information">ASP.NET VS. Wordpress</a>
+                            </li>
+                            <li>
+                                <a href="~/WebDevelopment#SSL" title="SSL Website Information">SSL Certificate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/Pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#!" title="Expand">Portfolio</a>
+                        <ul class="nav-dropdown">
+
+                            <li>
+                                <a href="~/WebDevelopmentPortfolio" title="View our previous work and current clients">Website Development</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/FAQ" title="Commonly asked questions and answers">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="~/Contact" title="Contanct Information for Website Serices">Contact</a>
+                    </li>
+                    <li><a href="tel:+16027771105" title="Call now for website design"><img src="~/Images/Phonepng_32x32.png" style="max-width:32px;" alt="Phone" />(602) 777-1105</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+            <div>
+                <p class="textSection" style="font-size:26px; color:white;">
+                    <br />   <br />   <br />   <br />   <br />   <br />   <br /><hr />
+                    Akira Web Solutions is an established web development company in Arizona, with clients throughout the US.
+
+                    Call us for website design, development, graphic design services, and responsive website design for mobile-friendly websites.
+
+                    Don't pay for over priced web designers when you can have the professional quality and national experience right here for less with Akira Web Solutions.
+                </p>
+
             </div>
         </section>
+    </div>
+    <footer>
 
-        
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-                <div>
-                    <p class="textSection" style="font-size:26px;">
-                        <br />   <br />   <br />   <br />   <br />   <br />   <br /><hr />
-                        Akira Web Solutions is an established web development company in Arizona, with clients throughout the US.
+        <div class="content-wrapper">
 
-                        Call us for website design, development, graphic design services, and responsive web design for mobile-friendly websites.
+            <div class="float-left">
+                <ul class="sitemap">
+                    <li>
+                        <a href="~/Default" title=" Home - SEO, Website Design, Website Building">Home</a>
+                    </li>
+                    <li>
+                        <a href="~/About" title="About Our Website Design Team">About</a>
+                    </li>
+                    <li>
+                        <a href="~/WebDevelopment" title="About Our Website development">Web Development</a>
+                    </li>
+                    <li>
+                        <a href="~/WebDevelopment#Responsive Web Design" title="About Our Responsive Website Design">Responsive Website Design</a>
+                    </li>
+                </ul>
 
-                        Don't pay for over priced web designers when you can have the professional quality and national experience right here for less with Akira Web Solutions.
-                    </p>
-                    
-                </div>
-            </section>
+                <ul class="sitemap">
+                    <li>
+                        <a href="~/WebDevelopment#SEO" title="About Our Website SEO">Search Engine Optimization</a>
+                    </li>
+                    <li>
+                        <a href="~/Pricing" title="About Our Website Pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="~/WebDevelopmentPortfolio" title="view our previous work and current clients">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="~/Contact" title="Contanct Information for Website Serices">Contact</a>
+                    </li>
+                </ul>
+                <ul class="sitemap">
+                    <li>
+                        <a href="~/WebDevelopment#ASP" title="About Our Website coded in ASP.NET">ASP.NET VS. Wordpress</a>
+                    </li>
+                    <li>
+                        <a href="~/FAQ" title="Commonly asked website questions and answers">FAQ</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-        <footer>
+        <div class="footersocial">
+            @*<a href="https://www.facebook.com/Akira-Web-Solutions-189302461673713/" title="our facebook">
+            <img src="~/Images/facebook_250x64.png" style="max-height:64px; max-width:258px;" alt="Facebook" />
+        </a>*@
+            <div class="fb-like" data-href="https://www.facebook.com/AkiraWebSolutions/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true" style="bottom:5px;"></div>
+            @*<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAkiraWebSolutions%2F&width=140&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId" width="140" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>*@
+            @*<a href="https://twitter.com/Akira_WebDev" title="our twitter">
+            <img src="~/Images/twitter_64x64.png" style="max-height:64px; max-width:64px;" alt="Twitter" />
+        </a>*@
+            <a href="https://twitter.com/Akira_WebDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow &#64;Akira_WebDev</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">    lang: en_US</script>
+            <script type="IN/FollowCompany" data-id="18527891" data-counter="top">
+            </script>
+            <a href="https://www.instagram.com/akira_web_solutions/" title="our instagram">
+                <img src="~/Images/instagram_64x64.png" style="max-height:64px; max-width:64px;" alt="Instagram" />
+            </a>
 
-            <div class="content-wrapper">
+            @*<a href="https://github.com/akira796?tab=repositories" title="our github">
+            <img src="~/Images/GitHub-Logo_250x64.png" style="max-height:64px; max-width:258px;" alt="Github" />
+        </a>*@
+            @*<a href="https://www.tumblr.com/blog/akirawebsolutions" title="our tumblr">
+            <img src="~/Images/Tumblr-icon_64x64.png" style="max-height:64px; max-width:64px;" alt="Tumblr" />
+        </a>*@
+            @*<a href="https://www.linkedin.com/in/taylorbishop/" title="our linkedin">
+            <img src="~/Images/llinkedin-icon_64x64.png" style="max-height:64px; max-width:64px;" alt="Liknedin" />
+        </a>*@
 
-                <div class="float-left">
-                    <ul class="sitemap">
-                        <li>
-                            <a href="~/Default.cshtml">Home</a>
-                        </li>
-                        <li>
-                            <a href="~/About.cshtml">About</a>
-                        </li>
-                        <li>
-                            <a href="~/Web Development.cshtml">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="~/Web Development.cshtml#Responsive Web Design">Responsive Web Design</a>
-                        </li>
-                    </ul>
+        </div>
+        <div class="float-right">
 
-                    <ul class="sitemap">
-                        <li>
-                            <a href="~/Web Development.cshtml#SEO">Search Engine Optimization</a>
-                        </li>
-                        <li>
-                            <a href="~/Pricing.cshtml">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="~/Web Development Portfolio.cshtml">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="~/Contact.cshtml">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footersocial">
-                <a href="https://www.facebook.com/Akira-Web-Solutions-189302461673713/">
-                    <img src="~/Images/facebook.png" style="max-height:64px; max-width:258px;" />
-                </a>
-                <a href="https://twitter.com/Akira_WebDev">
-                    <img src="~/Images/twitter.png" style="max-height:64px; max-width:64px;" />
-                </a>
-
-                <a href="https://www.instagram.com/akirawebsolutions/">
-                    <img src="~/Images/instagram.png" style="max-height:64px; max-width:64px;" />
-                </a>
-
-                <a href="https://github.com/akira796?tab=repositories">
-                    <img src="~/Images/GitHub-Logo.png" style="max-height:64px; max-width:258px;" />
-                </a>
-                <a href="https://www.tumblr.com/blog/akirawebsolutions">
-                    <img src="~/Images/Tumblr-icon.png" style="max-height:64px; max-width:64px;" />
-                </a>
-                <a href="https://www.linkedin.com/in/taylorbishop/">
-                    <img src="~/Images/llinkedin-icon.png" style="max-height:64px; max-width:64px;" />
-                </a>
-            </div>
-            <div class="float-right">
-
-                <p>&copy; @DateTime.Now.Year - Akira Web Solutions. all websites made with CSS3, HTML5, Javascript, and SQL. </p>
-            </div>
-        </footer>
-        @RenderSection("Scripts", required: false)
-    </body>
+            <p>&copy; @DateTime.Now.Year - Akira Web Solutions. all websites made with CSS3, HTML5, C#, Javascript, and SQL. </p>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
 </html>
 
-<script>(function ($) { // Begin jQuery
-        $(function () { // DOM ready
-            // If a link has a dropdown, add sub menu toggle.
-            $('nav ul li a:not(:only-child)').click(function (e) {
-                $(this).siblings('.nav-dropdown').toggle();
-                // Close one dropdown when selecting another
-                $('.nav-dropdown').not($(this).siblings()).hide();
-                e.stopPropagation();
-            });
-            // Clicking away from dropdown will remove the dropdown class
-            $('html').click(function () {
-                $('.nav-dropdown').hide();
-            });
-            // Toggle open and close nav styles on click
-            $('#nav-toggle').click(function () {
-                $('nav ul').slideToggle();
-            });
-            // Hamburger to X toggle
-            $('#nav-toggle').on('click', function () {
-                this.classList.toggle('active');
-            });
-        }); // end DOM ready
-    })(jQuery); // end jQuery</script>
+<script>!function (n) { n(function () { n("nav ul li a:not(:only-child)").click(function (i) { n(this).siblings(".nav-dropdown").toggle(), n(".nav-dropdown").not(n(this).siblings()).hide(), i.stopPropagation() }), n("html").click(function () { n(".nav-dropdown").hide() }), n("#nav-toggle").click(function () { n("nav ul").slideToggle() }), n("#nav-toggle").on("click", function () { this.classList.toggle("active") }) }) }(jQuery);</script>
+<div id="fb-root"></div>
+<script>
+(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
-
-<style> ul.sitemap{
-     display:inline-block;   
- }
-    a:link, a:visited, a:active, a:hover{
-        color:white;
-    }
-    .footersocial{
-        
-        text-align:center;
-        padding-right:15%;
-    }
-</style>
