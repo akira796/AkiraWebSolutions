@@ -7,7 +7,55 @@
     //Page.Title = "Home";
 }
 <style>
-    .container li,.sliding{display:none}.sliding{opacity:0;position:relative;margin-left:-120px;width:100%}.processTitle{text-align:center;font-size:24px}#body{background-color:#e0ffff;font-size:24px}#body p{padding:0}.container{margin:0 auto;position:relative;overflow:hidden;max-width:100%}.container span{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute}.container li,.container ul{padding:0;margin:0;list-style:none}.container li.active{display:inline}
+    .container li, .sliding {
+        display: none
+    }
+
+    .sliding {
+        opacity: 0;
+        position: relative;
+        margin-left: -120px;
+        width: 100%
+    }
+
+    .processTitle {
+        text-align: center;
+        font-size: 24px
+    }
+
+    #body {
+        background-color: #e0ffff;
+        font-size: 24px
+    }
+
+        #body p {
+            padding: 0
+        }
+
+    .container {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 100%
+    }
+
+        .container span {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: absolute
+        }
+
+        .container li, .container ul {
+            padding: 0;
+            margin: 0;
+            list-style: none
+        }
+
+            .container li.active {
+                display: inline
+            }
+
     #body {
         background-image: url('Images/sepiaview.jpg');
         background-size: cover;
@@ -16,22 +64,35 @@
         font-family: aleo-bold;
         font-size: 24px;
     }
+
+   
 </style>
-<link href="css/alpha.css" rel="stylesheet" type="text/css" />
+@*<link href="css/alpha.css" rel="stylesheet" type="text/css" />*@
 
 <div class="containmentTest">
-    <div class="container" id="container" style="padding: 0 0px; max-width:80%;">
-        <ul>
+        <div class="container" id="container" style="padding: 0 0px; max-width:80%;">
+            <ul>
 
-            
-            <li class="active"><img src="~/Images/Web-design-18.jpg" style="width:100%; height:538px;" alt="WebDesign" /></li>
-            <li><img src="~/Images/seo-services.jpg" style="width:100%; height:538px;" alt="seo" /></li>
-            <li><img src="~/Images/Responsive web design3.jpg" style="width:100%; height:538px;" alt="rwd" /></li>
-            <li><img src="~/Images/net.jpg" style="width:100%; height:538px;" alt=".net" /></li>
-            <li><img src="~/Images/sslcertificate-2.png" style="width:100%; height:538px;" alt="ssl" /></li>
-        </ul>
+
+                <li class="active">
+                    <img src="~/Images/Web-design-18.jpg" class="homePageImg" alt="WebDesign" />
+                </li>
+                <li>
+                    <img src="~/Images/seo-services.jpg" class="homePageImg" alt="seo" />
+                </li>
+                <li>
+                    <img src="~/Images/Responsive web design3.jpg" class="homePageImg" alt="rwd" />
+                </li>
+                <li>
+                    <img src="~/Images/net.jpg" class="homePageImg" alt=".net" />
+                </li>
+                <li>
+                    <img src="~/Images/sslcertificate-2.png" class="homePageImg" alt="ssl" />
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+
 
 
 
@@ -71,7 +132,9 @@
 
     <div class="six sliding">
         <p class="textSection">
-            If that sounds like just what you need, give Akira Web Solutions a call at <a href="tel:+16027771105" style="color:black; font-weight:bold;" title="Call for Website Design Services">(602) 777-1105</a> or send us an <a href="mailto:akirawebsolutions0@gmail.com" title="Email for Website Design Services"style="color:black; font-weight:bold;">email.</a>
+            If that sounds like just what you need, give Akira Web Solutions a call at
+            <a href="tel:+16027771105" style="color:black; font-weight:bold;" title="Call for Website Design Services">(602) 777-1105</a> or send us an
+            <a href="mailto:akirawebsolutions0@gmail.com" title="Email for Website Design Services" style="color:black; font-weight:bold;">email.</a>
         </p>
     </div>
 </div>
@@ -81,7 +144,7 @@
 
 
 @*<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>*@
-<script type="text/javascript" src="js/alpha.min.js"></script>
+@*<script type="text/javascript" src="js/alpha.min.js"></script>*@
 
 @*Gallery*@
 <script>
@@ -94,3 +157,4 @@
 <script>
     $(document).ready(function () { $(".one").css("display", "block").animate({ opacity: 1, left: "120px" }, 600), $(".two").css("display", "block").delay(150).animate({ opacity: 1, left: "120px" }, 600), $(".three").css("display", "block").delay(300).animate({ opacity: 1, left: "120px" }, 600), $(".four").css("display", "block").delay(450).animate({ opacity: 1, left: "120px" }, 600), $(".five").css("display", "block").delay(700).animate({ opacity: 1, left: "120px" }, 600), $(".six").css("display", "block").delay(850).animate({ opacity: 1, left: "120px" }, 600), $(".seven").css("display", "block").delay(1e3).animate({ opacity: 1, left: "120px" }, 600) });
 </script>
+@*Gallery*@
