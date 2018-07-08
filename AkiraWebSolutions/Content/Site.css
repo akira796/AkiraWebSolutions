@@ -103,7 +103,7 @@ h5, h6 {
 
 .content-wrapper {
     margin: 0 auto;
-    max-width: 1680px
+    max-width: 100%
 }
 
 #body {
@@ -120,7 +120,7 @@ footer {
     clear: both;
     background-color: #262626;
     font-size: .8em;
-    height: 112px;
+    height: auto;
     color: #fff
 }
 
@@ -578,12 +578,7 @@ h3.textSection {
     text-align: center
 }
 
-p.textSection {
-    text-indent: 50px;
-    text-align: justify;
-    letter-spacing: 1px;
-    padding: 50px
-}
+
 
 .button, .team-hover .s-link, .text-center {
     text-align: center
@@ -894,7 +889,7 @@ body {
 
 .column {
     float: left;
-    width: 33.3%;
+    width: 100%;
     margin-bottom: 16px;
     padding: 0 8px
 }
@@ -942,6 +937,30 @@ img.homePageImg {
     width: 100%;
     height: 538px;
 }
+p.textSection {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
+    padding: 50px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right:auto;
+}
+img.websiteCost {
+    width: 75%;
+}
+ul.PricingList {
+    display: inline-block;
+    padding-left:30%;
+}
+ul.PricingList2 {
+    display: inline-block;
+ 
+}
+ul.PricingList3 {
+    display: inline-block;
+    padding-left: 45%;
+}
 @media only screen and (max-width:798px) {
     /*img.homePageImg {
         width: 100%;
@@ -950,10 +969,19 @@ img.homePageImg {
     p.textSection {
         text-indent: 25px;
         text-align: center;
-        letter-spacing: 1px;
+        
         font-size: 20px;
         padding:0px;
         max-width:90%;
-        margin:auto;
+       
+    }
+    ul.PricingList{
+        padding-left:0px;
+    }
+    ul.PricingList3 {
+        padding-left: 0px;
+    }
+    img.websiteCost{
+        width:100%;
     }
 }
