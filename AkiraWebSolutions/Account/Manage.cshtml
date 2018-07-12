@@ -5,7 +5,12 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 }
-
+    <style>
+        #body {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
 @{
     WebSecurity.RequireAuthenticatedUser();
 
@@ -196,6 +201,6 @@
         </table>
     }
 
-    <h3>Add an external login</h3>
-    @RenderPage("~/Account/_ExternalLoginsList.cshtml")
+    @*<h3>Add an external login</h3>
+    @RenderPage("~/Account/_ExternalLoginsList.cshtml")*@
 </section>

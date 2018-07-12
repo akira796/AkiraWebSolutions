@@ -4,10 +4,10 @@
     <meta name="author" content="Akira Web Solutions" />
     <meta name="description" content="Akira Web Solutions; website design and graphic design company in Phoenix, Arizona. Why pay overpriced website design prices - we do the same for less." />
     <title>Website Design, Hosting, SEO, SSL, Phoenix - Akira Web Solutions</title>
-    //Page.Title = "Home";
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-}
+    }
+
+
+
 <style>
     .container li, .sliding {
         display: none
@@ -67,31 +67,8 @@
         font-size: 24px;
     }
 </style>
-@*<link href="css/alpha.css" rel="stylesheet" type="text/css" />*@
-
-@*<div class="containmentTest">
-        <div class="container" id="container" style="padding: 0 0px; max-width:80%;">
-            <ul>
 
 
-                <li class="active">
-                    <img src="~/Images/Web-design-18.jpg" class="homePageImg" alt="WebDesign" />
-                </li>
-                <li>
-                    <img src="~/Images/seo-services.jpg" class="homePageImg" alt="seo" />
-                </li>
-                <li>
-                    <img src="~/Images/Responsive web design3.jpg" class="homePageImg" alt="rwd" />
-                </li>
-                <li>
-                    <img src="~/Images/net.jpg" class="homePageImg" alt=".net" />
-                </li>
-                <li>
-                    <img src="~/Images/sslcertificate-2.png" class="homePageImg" alt="ssl" />
-                </li>
-            </ul>
-        </div>
-    </div>*@
 
 <div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="text-align:center; margin:auto;">
@@ -171,23 +148,14 @@
     </div>
 </div>
 
-@*<div style="margin:auto; text-align:center;">
-    <img src="~/Images/Website-Cost.jpg" class="websiteCost"/>
-</div>*@
-
-
-@*<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>*@
-@*<script type="text/javascript" src="js/alpha.min.js"></script>*@
-
 @*Gallery*@
-@*<script>
-        function calculateBorders() { var e = Math.floor(9 * Math.random() + 1) / 10 * gapHeight; return { borderWidthTop: e, borderWidthBottom: gapHeight - e } } function animateBorders() { var e = !1; blinds.animate({ borderTopWidth: height / 2, borderBottomWidth: height / 2 }, 1e3, function () { e || (images[activeImage].removeClass("active"), activeImage = (activeImage + 1) % images.length, images[activeImage].addClass("active"), setTimeout(animateBorders, 3e3), e = !0); var t = calculateBorders(); $(this).delay(300).animate({ borderTopWidth: t.borderWidthTop, borderBottomWidth: t.borderWidthBottom }, 1e3) }) } $(document).ready(function () { height = 538; var e = "#000"; gapHeight = 100; var t = $("#container"); t.width(1680).height(height); images = new Array, $("ul li", t).each(function () { images.push($(this)) }), images[0].addClass("active"), activeImage = 0; for (var a = 0; a < 20; a++) { var i = $(document.createElement("span")), r = calculateBorders(); i.css({ left: 84 * a, border: "2px solid " + e, borderTop: r.borderWidthTop + "px solid " + e, borderBottom: r.borderWidthBottom + "px solid " + e, height: height, width: 84 }), t.prepend(i) } blinds = $("span", t), setTimeout(animateBorders, 1e3) });
-    </script>*@
+<link async rel="stylesheet" href="~/Content/themes/base/minified/bootstrap.min.css" type="text/css">
 
-
+<script async src="~/Scripts/bootstrap.min.js"></script>
 
 @*Text slide in*@
 <script>
+
     $(document).ready(function () { $(".one").css("display", "block").animate({ opacity: 1, left: "120px" }, 600), $(".two").css("display", "block").delay(150).animate({ opacity: 1, left: "120px" }, 600), $(".three").css("display", "block").delay(300).animate({ opacity: 1, left: "120px" }, 600), $(".four").css("display", "block").delay(450).animate({ opacity: 1, left: "120px" }, 600), $(".five").css("display", "block").delay(700).animate({ opacity: 1, left: "120px" }, 600), $(".six").css("display", "block").delay(850).animate({ opacity: 1, left: "120px" }, 600), $(".seven").css("display", "block").delay(1e3).animate({ opacity: 1, left: "120px" }, 600) });
 </script>
 @*Gallery*@

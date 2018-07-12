@@ -2,11 +2,19 @@
 @section Scripts {
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
 }
+<style>
+    #body{
+        text-align:center;
+    }
+</style>
+
 
 @{
     Layout = "~/_SiteLayout.cshtml";
-    Page.Title = "Register";
+
+       Page.Title = "Register";
 
     // Initialize general page variables
     var email = "";
@@ -70,7 +78,7 @@
                         // Navigate back to the homepage and exit
                         WebSecurity.Login(email, password);
 
-                        Response.Redirect("~/");
+                        Response.Redirect("~/Default");
                     }
                 } catch (System.Web.Security.MembershipCreateUserException e) {
                     ModelState.AddFormError(e.Message);
@@ -116,13 +124,13 @@
             </li>
             <li class="recaptcha">
                 <div class="message-info">
-                    <p>
+                    @*<p>
                         To enable CAPTCHA verification, <a href="https://go.microsoft.com/fwlink/?LinkId=204140">install the 
                         ASP.NET Web Helpers Library</a> and uncomment ReCaptcha.GetHtml and replace 'PUBLIC_KEY'
                         with your public key. At the top of this page, uncomment ReCaptcha. Validate and
                         replace 'PRIVATE_KEY' with your private key.
                         Register for reCAPTCHA keys at <a href="http://recaptcha.net">reCAPTCHA.net</a>.
-                    </p>
+                    </p>*@
                 </div>
                 @*
                 @ReCaptcha.GetHtml("PUBLIC_KEY", theme: "white")

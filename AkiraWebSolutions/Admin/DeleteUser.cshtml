@@ -1,0 +1,80 @@
+﻿@{
+    Page.Title = "Title goes here";
+    //Layout = "Your Layout Page goes here";
+    var Email = "";
+    var UserId = "";
+
+    if (!IsPost)
+    {
+        if (!Request.QueryString["ID"].IsEmpty() && Request.QueryString["ID"].IsInt())
+        {
+            UserId = Request.QueryString["ID"];
+            var db = Database.Open("StarterSite");
+            var dbCommand = "SELECT * FROM UserProfile WHERE UserId = @0";
+            var row = db.QuerySingle(dbCommand, UserId);
+            if (row != null)
+            {
+                Email = row.Email;
+
+            }
+            else
+            {
+                Validation.AddFormError("No User was found for that ID.");
+            }
+        }
+        else
+        {
+            Validation.AddFormError("No User was found for that ID.");
+        }
+    }
+
+    if (IsPost && !Request["buttonDelete"].IsEmpty())
+    {
+        UserId = Request.Form["UserId"];
+        var db = Database.Open("StarterSite");
+        var deleteCommand = "DELETE FROM UserProfile WHERE UserId = @0";
+        db.Execute(deleteCommand, UserId);
+        Response.Redirect("~/Admin/Admin");
+    }
+}<style>
+    #body {
+        text-align: center;
+        margin: auto;
+    }
+</style>
+@if (Roles.IsUserInRole("Admin"))
+{
+    <span> Welcome <b>@WebSecurity.CurrentUserName</b>! </span>
+}
+else
+{
+    Response.Redirect("~/Admin/AdminError");
+}
+<h1 style="text-align:center;">Delete a User</h1>
+@Html.ValidationSummary()
+<p><a href="~/Admin/Admin.cshtml">Return to User listing</a></p>
+
+<form method="post">
+    <fieldset style="text-align:center;">
+        <legend>User Information</legend>
+
+        <p>
+            <span>User:</span>
+            <span>@Email</span>
+        </p>
+
+        @*<p>
+                <span>Genre:</span>
+                <span>@genre</span>
+            </p>
+
+            <p>
+                <span>Year:</span>
+                <span>@year</span>
+            </p>*@
+
+        <input type="hidden" name="UserId" value="@UserId" />
+        <p><input type="submit" name="buttonDelete" value="Delete User" /></p>
+    </fieldset>
+    <p><a href="~/Admin/Admin.cshtml">Return to User listing</a></p>
+</form>

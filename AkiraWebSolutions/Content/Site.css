@@ -590,7 +590,7 @@ a.textSection {
 }
 
 .navigation {
-    height: 80px;
+    height:120px;
     background-color: #000;
     color: silver
 }
@@ -906,7 +906,8 @@ body {
 }
 
 .container {
-    padding: 0 16px
+    padding: 0 16px;
+    text-align:center;
 }
 
     .container::after, .row::after {
@@ -961,6 +962,9 @@ ul.PricingList3 {
     display: inline-block;
     padding-left: 45%;
 }
+ul.sub2 {
+    max-width: 50%;
+}
 @media only screen and (max-width:798px) {
     /*img.homePageImg {
         width: 100%;
@@ -983,5 +987,8 @@ ul.PricingList3 {
     }
     img.websiteCost{
         width:100%;
+    }
+    ul.sub2 {
+        max-width: 100%;
     }
 }
