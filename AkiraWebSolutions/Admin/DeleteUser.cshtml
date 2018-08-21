@@ -1,4 +1,12 @@
-﻿@{
+﻿@if (Roles.IsUserInRole("Admin"))
+{
+    <span> Welcome <b>@WebSecurity.CurrentUserName</b>! </span>
+}
+else
+{
+    Response.Redirect("~/Admin/AdminError");
+}
+@{
     Page.Title = "Title goes here";
     //Layout = "Your Layout Page goes here";
     var Email = "";
@@ -36,20 +44,14 @@
         db.Execute(deleteCommand, UserId);
         Response.Redirect("~/Admin/Admin");
     }
-}<style>
+}
+<style>
     #body {
         text-align: center;
         margin: auto;
     }
 </style>
-@if (Roles.IsUserInRole("Admin"))
-{
-    <span> Welcome <b>@WebSecurity.CurrentUserName</b>! </span>
-}
-else
-{
-    Response.Redirect("~/Admin/AdminError");
-}
+
 <h1 style="text-align:center;">Delete a User</h1>
 @Html.ValidationSummary()
 <p><a href="~/Admin/Admin.cshtml">Return to User listing</a></p>

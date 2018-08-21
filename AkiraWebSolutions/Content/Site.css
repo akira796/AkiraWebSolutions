@@ -947,6 +947,15 @@ p.textSection {
     margin-left: auto;
     margin-right:auto;
 }
+.blogTextSection {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
+    padding: 50px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 img.websiteCost {
     width: 75%;
 }
@@ -965,6 +974,7 @@ ul.PricingList3 {
 ul.sub2 {
     max-width: 50%;
 }
+
 @media only screen and (max-width:798px) {
     /*img.homePageImg {
         width: 100%;
@@ -991,4 +1001,5 @@ ul.sub2 {
     ul.sub2 {
         max-width: 100%;
     }
+   
 }

@@ -2,9 +2,9 @@
     Layout = "~/_SiteLayout.cshtml";
     <meta name="keywords" content="website builder Phoenix, website design Phoenix, SEO Phoenix, website hosting Phoenix, SSL Certificate Phoenix, SEO Phoenix, website builder Buckeye, website design Buckeye, SEO Buckeye, website hosting Buckeye, SSL Ceritifcate Buckeye, SEO Buckeye" />
     <meta name="author" content="Akira Web Solutions" />
-    <meta name="description" content="Akira Web Solutions; website design and graphic design company in Phoenix, Arizona. Why pay overpriced website design prices - we do the same for less." />
+    <meta name="description" content="Akira Web Solutions; website design company in Phoenix, Arizona and Colorado Springs, Colorado. Why pay overpriced website design prices - we do the same for less." />
     <title>Website Design, Hosting, SEO, SSL, Phoenix - Akira Web Solutions</title>
-    }
+}
 
 
 
@@ -59,12 +59,18 @@
             }
 
     #body {
-        background-image: url('Images/sepiaview.jpg');
+        /*background-image: url('Images/sepiaview.jpg');*/
         background-size: cover;
         background-repeat: no-repeat;
         background-color: lightcyan;
         font-family: aleo-bold;
         font-size: 24px;
+    }
+
+    .HomeSectionOne {
+        background-image: url('Images/3.jpg');
+        background-size: cover;
+        background-position: left bottom;
     }
 </style>
 
@@ -80,7 +86,7 @@
             <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active" style="text-align:center; margin:auto; ">
                 <img src="~/Images/Web-design-18.jpg" alt="Los Angeles" style="width:100%; max-height:538px;">
             </div>
             <div class="item" style="text-align:center; margin:auto; ">
@@ -101,15 +107,18 @@
     </div>
 </div>
 
-<div style="background:rgba(0,0,0,.3); width:100%;">
-    <div style=" background-color:#f8fff0;">
-        <hr style="margin-top:0px;" />
-        <h1 class="textSection">Akira Web Solutions - Website Design, Hosting, SEO, SSL, Development</h1>
-        <hr />
-    </div>
-    <div>
+
+<div style=" background-color:#f8fff0;">
+    <hr style="margin-top:0px;" />
+    <h1 class="textSection" style="margin-bottom:0px;">Akira Web Solutions - Website Design, Hosting, SEO, SSL, Development</h1>
+
+</div>
+<div class="HomeSectionOne">
+
+    <div style="background:rgba(0,0,0,.5); width:100%;">
+
         <div class="one sliding">
-            <p class="textSection" style="color:white; ">
+            <p class="textSection" style="color:white; padding-top:50px;">
                 Finding the ideal website design company for your business can be tricky, so at Akira Web Solutions, we make it as easy as possible.
             </p>
         </div>
@@ -128,7 +137,7 @@
 
         <div class="four sliding">
             <p class="textSection" style="color:white;  text-indent:0px;">
-                We're the web solutions company you will want to work with, we'll stick within your budget, and you can call us direct for an update, help or advice. Our website design company is based in Arizona and our experienced team have worked with national companies in the US.
+                We're the web solutions company you will want to work with, we'll stick within your budget, and you can call us direct for an update, help or advice. Our website design company is based in Arizona &amp; Colorado. Our experienced team have worked with national companies in the US.
             </p>
         </div>
 
@@ -158,4 +167,3 @@
 
     $(document).ready(function () { $(".one").css("display", "block").animate({ opacity: 1, left: "120px" }, 600), $(".two").css("display", "block").delay(150).animate({ opacity: 1, left: "120px" }, 600), $(".three").css("display", "block").delay(300).animate({ opacity: 1, left: "120px" }, 600), $(".four").css("display", "block").delay(450).animate({ opacity: 1, left: "120px" }, 600), $(".five").css("display", "block").delay(700).animate({ opacity: 1, left: "120px" }, 600), $(".six").css("display", "block").delay(850).animate({ opacity: 1, left: "120px" }, 600), $(".seven").css("display", "block").delay(1e3).animate({ opacity: 1, left: "120px" }, 600) });
 </script>
-@*Gallery*@
