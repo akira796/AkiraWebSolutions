@@ -72,12 +72,7 @@
    <changefreq>hourly</changefreq>
    <priority>0.8000</priority>
 </url>
-<url>
-   <loc>https://www.akirawebsolutions.com/Blog/BlogLandingPage.cshtml</loc>
-   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
-   <changefreq>hourly</changefreq>
-   <priority>0.8000</priority>
-</url>
+
 <url>
    <loc>https://www.akirawebsolutions.com/Account/ForgotPassword</loc>
    <lastmod>2018-08-21T18:18:44+00:00</lastmod>
@@ -103,9 +98,27 @@
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://www.akirawebsolutions.com/WebDevelopment.cshtml</loc>
+   <loc>https://www.akirawebsolutions.com/WebDevelopment</loc>
    <lastmod>2018-08-21T18:18:44+00:00</lastmod>
    <changefreq>hourly</changefreq>
    <priority>0.6400</priority>
 </url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/7%20Essential%20Reasons%20Why%20You%20Need%20a%20Website</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+  <url>
+    <loc>https://www.akirawebsolutions.com/Blog/Organic%20Traffic</loc>
+    <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
+  </url>
+  <url>
+    <loc>https://www.akirawebsolutions.com/Blog/Cloud%20Computing</loc>
+    <lastmod>2018-08-22T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
+  </url>
 </urlset>
