@@ -1,0 +1,96 @@
+﻿@{
+    Page.Title = "Title goes here";
+    //Layout = "Your Layout Page goes here";
+}
+
+@{
+    var Email = "";
+    var UserId = "";
+
+    if (!IsPost)
+    {
+        if (!Request.QueryString["ID"].IsEmpty() && Request.QueryString["ID"].IsInt())
+        {
+            UserId = Request.QueryString["ID"];
+            var db = Database.Open("StarterSite");
+            var dbCommand = "SELECT * FROM UserProfile WHERE UserId = @0";
+            var row = db.QuerySingle(dbCommand, UserId);
+
+            if (row != null)
+            {
+                Email = row.Email;
+
+            }
+            else
+            {
+                Validation.AddFormError("No user was selected.");
+            }
+        }
+        else
+        {
+            Validation.AddFormError("No user was selected.");
+        }
+    }
+
+    if (IsPost)
+    {
+        Validation.RequireField("Email", "You must enter an email");
+        Validation.RequireField("UserId", "No user ID was submitted!");
+
+        Email = Request.Form["Email"];
+
+        UserId = Request.Form["UserId"];
+
+        if (Validation.IsValid())
+        {
+            var db = Database.Open("StarterSite");
+            var updateCommand = "UPDATE UserProfile SET Email=@0 where UserId=@1";
+            db.Execute(updateCommand, Email, UserId);
+            Response.Redirect("~/Admin/Admin");
+        }
+    }
+}
+
+@if (Roles.IsUserInRole("Admin"))
+{
+    <span> Welcome <b>@WebSecurity.CurrentUserName</b>! </span>
+}
+else
+{
+    Response.Redirect("~/Admin/AdminError");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Edit a User</title>
+    <style>
+        .validation-summary-errors {
+            border: 2px dashed red;
+            color: red;
+            font-weight: bold;
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Edit a User</h1>
+    @Html.ValidationSummary()
+    <form method="post">
+        <fieldset style="text-align:center;">
+            <legend>User Information</legend>
+
+            <p>
+                <label for="title">Email</label>
+                <input type="text" name="Email" value="@Email" />
+            </p>
+
+
+            <input type="hidden" name="UserId" value="@UserId" />
+
+            <p><input type="submit" name="buttonSubmit" value="Submit Changes" /></p>
+        </fieldset>
+    </form>
+    <p><a href="~/Admin/Admin.cshtml">Return to user listing</a></p>
+</body>
+</html>

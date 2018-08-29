@@ -3,55 +3,122 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- www.check-domains.com sitemap generator -->
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	  	  
+<!-- www.check-domains.com sitemap generator -->
 
+<url>
+   <loc>https://www.akirawebsolutions.com/</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>1.0000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Account/Register</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Account/Login</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Default</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/About</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/WebDevelopment</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/Timeline</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Pricing</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/WebDevelopmentPortfolio</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/FAQ</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Contact</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.8000</priority>
+</url>
+
+<url>
+   <loc>https://www.akirawebsolutions.com/Account/ForgotPassword</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/Apple%20Is%20Planning%20a%20New%20Low-Cost%20MacBook</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/who%20needs%20democracy%20when%20you%20have%20data</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/Stratolaunch%20announces%20new%20launch</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/WebDevelopment</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.akirawebsolutions.com/Blog/7%20Essential%20Reasons%20Why%20You%20Need%20a%20Website</loc>
+   <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+   <changefreq>hourly</changefreq>
+   <priority>0.6400</priority>
+</url>
   <url>
-    <loc>https://www.akirawebsolutions.com/</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0000</priority>
+    <loc>https://www.akirawebsolutions.com/Blog/Organic%20Traffic</loc>
+    <lastmod>2018-08-21T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
   </url>
   <url>
-    <loc>https://www.akirawebsolutions.com/Default</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/About</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/WebDevelopment</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/Pricing</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/WebDevelopmentPortfolio</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/FAQ</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
-  <url>
-    <loc>https://www.akirawebsolutions.com/Contact</loc>
-    <lastmod>2018-05-15T21:43:17+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
+    <loc>https://www.akirawebsolutions.com/Blog/Cloud%20Computing</loc>
+    <lastmod>2018-08-22T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
   </url>
 </urlset>

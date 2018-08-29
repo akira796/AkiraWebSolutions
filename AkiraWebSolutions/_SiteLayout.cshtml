@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>
     <script>
@@ -11,18 +15,34 @@
         gtag('config', 'UA-83806060-4');
     </script>
 
+    
+
+
     <meta charset="utf-8" />
-    @*<title>@Page.Title - Akira Web Solutions</title>*@
-    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <title>@Page.Title - Akira Web Solutions</title>
+    <link async href="~/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link async href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
     <meta name="viewport" content="width=device-width" />
+
+
+
 </head>
 
 <body>
+    <!-- Global site tag (gtag.js) - Facebook Comments -->
+    <div id="fb-root"></div>
+    <script>
+(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
     <style>
         ul.sitemap {
             display: inline-block
@@ -34,18 +54,37 @@
 
         .footersocial {
             text-align: center;
-            padding-right: 15%;
             max-height: 100%
         }
     </style>
     <section class="navigation">
+        <section id="login" style="display:inline-block;">
+            @if (WebSecurity.IsAuthenticated)
+            {
+                <text>
+                    Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                    <form id="logoutForm" action="~/Account/Logout" method="post">
+                        @AntiForgery.GetHtml()
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                    </form>
+                </text>
+            }
+            else
+            {
+                <ul>
+                    <li><a href="~/Account/Register">Register</a></li>
+                    <li><a href="~/Account/Login">Log in</a></li>
+                </ul>
+            }
+        </section>
         <div class="nav-container">
             <div class="brand">
-                <a href="~/Default" title=" Home - SEO, Website Design, Website Building">
 
-                    <img src="~/Images/AkiraLogoMock3.png" alt="Akira Logo" style="width:124px;" />
-                </a>
+
+                <img src="~/Images/AkiraLogoMock3.png" alt="Akira Logo" style="width:124px;" />
+
             </div>
+
             <nav>
                 <div class="nav-mobile"><a id="nav-toggle" href="#!" title="Expand"><span></span></a></div>
                 <ul class="nav-list">
@@ -77,27 +116,30 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="~/Pricing">Pricing</a>
+                        <a href="~/Blog/Timeline" title="Our Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="~/Pricing" title="Pricing Information">Pricing</a>
                     </li>
                     <li>
                         <a href="#!" title="Expand">Portfolio</a>
                         <ul class="nav-dropdown">
 
                             <li>
-                                <a href="~/WebDevelopmentPortfolio" title="View our previous work and current clients">Website Development</a>
+                                <a href="~/WebDevelopmentPortfolio" title="Previous Work And Current Clients">Website Development</a>
                             </li>
                             <li>
-                                <a href="https://github.com/akira796" title="View our previous work and current clients">Our GitHub</a>
+                                <a href="https://github.com/akira796" title="Previous Work And Current Clients" target="_blank">Our GitHub</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="~/FAQ" title="Commonly asked questions and answers">FAQ</a>
+                        <a href="~/FAQ" title="Commonly Asked Questions & Answers">FAQ</a>
                     </li>
                     <li>
-                        <a href="~/Contact" title="Contanct Information for Website Serices">Contact</a>
+                        <a href="~/Contact" title="Contact Information for Website Services">Contact</a>
                     </li>
-                    <li><a href="tel:+16027771105" title="Call now for website design"><img src="~/Images/Phonepng_32x32.png" style="max-width:32px; vertical-align:middle;" alt="Phone" />(602) 777-1105</a></li>
+                    @*<li><a href="tel:+16027771105" title="Call Now For Website Design"><img src="~/Images/Phonepng_32x32.png" style="max-width:32px; vertical-align:middle;" alt="Phone" />(602) 777-1105</a></li>*@
 
                 </ul>
 
@@ -114,9 +156,9 @@
             @RenderBody()
             <div>
                 <hr />
-                <p class="textSection" style=" color:white; background:rgba(0,0,0,.3);">
+                <p class="textSection" style=" color:white; background:rgba(0,0,0,.3); font-size:16px; max-width:80%; margin:auto;">
                     @*<br />   <br />   <br />   <br />   <br />   <br />   <br />*@
-                    Akira Web Solutions is an established web development company in Arizona, with clients throughout the US.
+                    Akira Web Solutions is an established web development company in Arizona &amp; Colorado, with clients throughout the US.
 
                     Call us for Website Design, Development, Hosting, SSL Certification and Responsive Website Design for mobile-friendly websites.
 
@@ -157,7 +199,7 @@
                         <a href="~/WebDevelopmentPortfolio" title="view our previous work and current clients">Portfolio</a>
                     </li>
                     <li>
-                        <a href="~/Contact" title="Contanct Information for Website Serices">Contact</a>
+                        <a href="~/Contact" title="Contact Information for Website Serices">Contact</a>
                     </li>
                 </ul>
                 <ul class="sitemap">
@@ -167,52 +209,49 @@
                     <li>
                         <a href="~/FAQ" title="Commonly asked website questions and answers">FAQ</a>
                     </li>
+                    <li>
+                        <a href="~/Blog/BlogLandingPage.cshtml" title="Akira Web Solutions blog">Blog</a>
+
+
+                    </li>
 
                 </ul>
             </div>
         </div>
         <div class="footersocial">
-            @*<a href="https://www.facebook.com/Akira-Web-Solutions-189302461673713/" title="our facebook">
-            <img src="~/Images/facebook_250x64.png" style="max-height:64px; max-width:258px;" alt="Facebook" />
-        </a>*@
+
             <div class="fb-like" data-href="https://www.facebook.com/AkiraWebSolutions/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true" style="bottom:5px;"></div>
-            @*<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAkiraWebSolutions%2F&width=140&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId" width="140" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>*@
-            @*<a href="https://twitter.com/Akira_WebDev" title="our twitter">
-            <img src="~/Images/twitter_64x64.png" style="max-height:64px; max-width:64px;" alt="Twitter" />
-        </a>*@
+
             <a href="https://twitter.com/Akira_WebDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow &#64;Akira_WebDev</a>
+            <br />
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <script src="//platform.linkedin.com/in.js" type="text/javascript">    lang: en_US</script>
-            <script type="IN/FollowCompany" data-id="18527891" data-counter="top">
-            </script>
+            @*<script src="//platform.linkedin.com/in.js" type="text/javascript">    lang: en_US</script>
+                <script type="IN/FollowCompany" data-id="18527891" data-counter="top">
+                </script>*@
             <a href="https://www.instagram.com/akira_web_solutions/" title="our instagram">
-                <img src="~/Images/instagram_64x64.png" style="max-height:64px; max-width:64px;" alt="Instagram" />
+                <img src="~/Images/instagram_64x64.png" style="max-height:64px; max-width:64px; vertical-align:top;" alt="Instagram" />
             </a>
-
-            @*<a href="https://github.com/akira796?tab=repositories" title="our github">
-            <img src="~/Images/GitHub-Logo_250x64.png" style="max-height:64px; max-width:258px;" alt="Github" />
-        </a>*@
-            @*<a href="https://www.tumblr.com/blog/akirawebsolutions" title="our tumblr">
-            <img src="~/Images/Tumblr-icon_64x64.png" style="max-height:64px; max-width:64px;" alt="Tumblr" />
-        </a>*@
-            @*<a href="https://www.linkedin.com/in/taylorbishop/" title="our linkedin">
-            <img src="~/Images/llinkedin-icon_64x64.png" style="max-height:64px; max-width:64px;" alt="Liknedin" />
-        </a>*@
-
-        </div>
-        <div class="float-right">
-
+            <br />
             <p>&copy; @DateTime.Now.Year - Akira Web Solutions. all websites made with CSS3, HTML5, C#, Javascript, and SQL. </p>
+            <br />
+
+
         </div>
+
     </footer>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
 
+
+<script async src="~/Scripts/jquery-ui-1.10.3.min.js"></script>
+<script async src="~/Scripts/modernizr-2.6.2.min.js"></script>
+
+@* Nav Script *@
 <script>!function (n) { n(function () { n("nav ul li a:not(:only-child)").click(function (i) { n(this).siblings(".nav-dropdown").toggle(), n(".nav-dropdown").not(n(this).siblings()).hide(), i.stopPropagation() }), n("html").click(function () { n(".nav-dropdown").hide() }), n("#nav-toggle").click(function () { n("nav ul").slideToggle() }), n("#nav-toggle").on("click", function () { this.classList.toggle("active") }) }) }(jQuery);</script>
 <div id="fb-root"></div>
 <script>
-(function (d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;

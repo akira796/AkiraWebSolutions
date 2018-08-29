@@ -1,0 +1,82 @@
+﻿@{
+    Page.Title = "Administrators only";
+    Layout = "~/_SiteLayout.cshtml";
+
+    var db = Database.Open("StarterSite");
+    var selectedData = db.Query("SELECT * FROM UserProfile");
+    var grid = new WebGrid(source: selectedData);
+
+
+    //var db = Database.Open("StarterSite");
+    //var insertcommand = "insert into userprofile (email) values('test2@gmail.com')";
+    ////var deletecommand = "delete from userprofile where userid = 6 or userid = 5 ";
+    //db.Execute(insertcommand);
+    ////db.Execute(deletecommand);
+    //var selectquerystring = "select * From UserProfile";
+    //WebSecurity.RequireAuthenticatedUser();
+
+
+
+}
+
+@if (Roles.IsUserInRole("Admin"))
+{
+    <span> Welcome <b>@WebSecurity.CurrentUserName</b>! </span>
+}
+else
+{
+    Response.Redirect("~/Admin/AdminError");
+}
+
+<style>
+    /*#body{
+        margin:auto;
+    }*/
+    .grid {
+        margin: auto;
+        border-collapse: collapse;
+        width: 600px;
+    }
+
+        .grid th, .grid td {
+            border: 1px solid #C0C0C0;
+            padding: 5px;
+        }
+
+    .head {
+        background-color: #E8E8E8;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+    .alt {
+        background-color: #E8E8E8;
+        color: #000;
+    }
+   
+</style>
+
+
+
+
+
+<div>
+
+
+    <h1 style="text-align:center;">Users</h1>
+    <div>
+        @grid.GetHtml(
+         tableStyle: "grid",
+         headerStyle: "head",
+         alternatingRowStyle: "alt",
+         columns: grid.Columns(
+             grid.Column(format: @<a href="~/Admin/EditUser?id=@item.UserId" style="color:black;">Edit</a>),
+             grid.Column("Email"),
+             grid.Column("UserId"),
+             grid.Column(format: @<a href="~/Admin/DeleteUser?id=@item.UserId" style="color:red;">Delete</a>)
+          )
+      )
+    </div>
+
+
+</div>
