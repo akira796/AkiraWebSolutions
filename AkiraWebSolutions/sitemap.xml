@@ -121,4 +121,16 @@
     <changefreq>hourly</changefreq>
     <priority>0.6400</priority>
   </url>
+<url>
+    <loc>https://www.akirawebsolutions.com/Blog/Cloud%20Computing%202</loc>
+    <lastmod>2018-08-22T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
+  </url>
+<url>
+    <loc>https://www.akirawebsolutions.com/Blog/Quality%20Process%20Improvement%20Tools</loc>
+    <lastmod>2018-08-22T18:18:44+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.6400</priority>
+  </url>
 </urlset>
