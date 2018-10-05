@@ -1043,7 +1043,7 @@ img.home-ui-nav-image-rotate {
 
 img.home-ui-nav-image {
     width: 100%;
-    max-height: 202px;
+    height: 355px;
 }
 img.home-ui-nav-image-recentWork {
     width: 100%;
@@ -1062,10 +1062,11 @@ img:hover.home-ui-nav-image-recentWork {
 .home-ui-nav-text{
     text-align:left;
     font-size:22px;
-    height:186px;
+    height:300px;
+    width:90%
 }
 .home-ui-nav-title {
-    width: 20%;
+    width: 30%;
     display: inline-block;
     height:537px;
 }
@@ -1104,6 +1105,21 @@ img:hover.home-ui-nav-image-recentWork {
     display: inline-block;
     float: right;
     margin-top: 10px;
+}
+.background-section1{
+    height:800px;
+}
+
+.background-section1-heading1 {
+    font-size: 72px;
+}
+
+.background-section1-heading2 {
+    font-size: 56px;
+}
+
+.background-section1-heading3 {
+    font-size: 42px;
 }
 @media only screen and (max-width:798px) {
     /*img.homePageImg {
@@ -1167,10 +1183,15 @@ img:hover.home-ui-nav-image-recentWork {
 
     img.home-ui-nav-image {
         width: 100%;
+        height:100%;
     }
-
+    .home-ui-nav-text {
+      width:100%;
+        height: 450px;
+    }
     .home-ui-nav-title {
         width: 100%;
+        height:100%;
         display: inline-block;
     }
     .home-ui-nav-title-rotate {
@@ -1199,12 +1220,22 @@ img:hover.home-ui-nav-image-recentWork {
     .footer-section-3 {
         width: 100%;
         text-align: center;
-        
-        
+    }
+    .background-section1 {
+        height: 276px;
+    }
+    .background-section1-heading1{
+        font-size:24px;
+    }
+    .background-section1-heading2 {
+        font-size: 20px;
+    }
+    .background-section1-heading3 {
+        font-size: 18px;
     }
 }
 
-
+/*Animations*/
 
 .button1 {
     margin: auto;
@@ -1269,3 +1300,28 @@ img:hover.home-ui-nav-image-recentWork {
             transition: .7s;
         }
 
+@-webkit-keyframes flash {
+    0% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.flash:hover {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+}
