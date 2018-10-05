@@ -3,7 +3,7 @@
 <head>
 
 
-    
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>
@@ -15,7 +15,28 @@
         gtag('config', 'UA-83806060-4');
     </script>
 
-    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '264044924241408');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=264044924241408&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
 
 
     <meta charset="utf-8" />
@@ -71,17 +92,17 @@
             }
             else
             {
-                <ul>
+                @*<ul>
                     <li><a href="~/Account/Register">Register</a></li>
                     <li><a href="~/Account/Login">Log in</a></li>
-                </ul>
+                </ul>*@
             }
         </section>
         <div class="nav-container">
             <div class="brand">
 
 
-                <img src="~/Images/AkiraLogoMock3.png" alt="Akira Logo" style="width:124px;" />
+                <img src="~/Images/AkiraLogoMock4.jpg" alt="Akira Logo" style="width:124px;" class="flash" />
 
             </div>
 
@@ -121,7 +142,12 @@
                     <li>
                         <a href="~/Pricing" title="Pricing Information">Pricing</a>
                     </li>
+                    
                     <li>
+                        <a href="~/WebDevelopmentPortfolio" title="Previous Work And Current Clients">Work</a>
+                    </li>
+                    
+                    @*<li>
                         <a href="#!" title="Expand">Portfolio</a>
                         <ul class="nav-dropdown">
 
@@ -132,7 +158,7 @@
                                 <a href="https://github.com/akira796" title="Previous Work And Current Clients" target="_blank">Our GitHub</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>*@
                     <li>
                         <a href="~/FAQ" title="Commonly Asked Questions & Answers">FAQ</a>
                     </li>
@@ -154,10 +180,10 @@
         @RenderSection("featured", required: false)
         <section class="content-wrapper main-content clear-fix">
             @RenderBody()
-            <div>
+            <div style="margin:0;">
                 <hr />
                 <p class="textSection" style=" color:white; background:rgba(0,0,0,.3); font-size:16px; max-width:80%; margin:auto;">
-                    @*<br />   <br />   <br />   <br />   <br />   <br />   <br />*@
+                   
                     Akira Web Solutions is an established web development company in Arizona &amp; Colorado, with clients throughout the US.
 
                     Call us for Website Design, Development, Hosting, SSL Certification and Responsive Website Design for mobile-friendly websites.
@@ -170,9 +196,9 @@
     </div>
     <footer>
 
-        <div class="content-wrapper">
-
-            <div class="float-left">
+      
+        <div class="footersocial" style="display:inline-block; width:100%;">
+            <div class="footer-section-1">
                 <ul class="sitemap">
                     <li>
                         <a href="~/Default" title=" Home - SEO, Website Design, Website Building">Home</a>
@@ -187,7 +213,6 @@
                         <a href="~/WebDevelopment#Responsive Web Design" title="About Our Responsive Website Design">Responsive Website Design</a>
                     </li>
                 </ul>
-
                 <ul class="sitemap">
                     <li>
                         <a href="~/WebDevelopment#SEO" title="About Our Website SEO">Search Engine Optimization</a>
@@ -212,29 +237,29 @@
                     <li>
                         <a href="~/Blog/BlogLandingPage.cshtml" title="Akira Web Solutions blog">Blog</a>
 
-
                     </li>
 
                 </ul>
             </div>
-        </div>
-        <div class="footersocial">
+            <div class="footer-section-2">
+                <span>&copy; @DateTime.Now.Year - Akira Web Solutions. Made with CSS3, HTML5, C#, Javascript, and SQL. </span>
+            </div>
+            <div class="footer-section-3">
+                <div class="fb-like" data-href="https://www.facebook.com/AkiraWebSolutions/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true" style="bottom:5px;"></div>
+                <br />
+                <a href="https://twitter.com/Akira_WebDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow &#64;Akira_WebDev</a>
+                <br />
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br />
+                <script src="//platform.linkedin.com/in.js" type="text/javascript">    lang: en_US</script>
+            <script type="IN/FollowCompany" data-id="18527891" data-counter="top">
+            </script>
+                <a href="https://www.instagram.com/akira_web_solutions/" title="our instagram">
 
-            <div class="fb-like" data-href="https://www.facebook.com/AkiraWebSolutions/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true" style="bottom:5px;"></div>
 
-            <a href="https://twitter.com/Akira_WebDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow &#64;Akira_WebDev</a>
-            <br />
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            @*<script src="//platform.linkedin.com/in.js" type="text/javascript">    lang: en_US</script>
-                <script type="IN/FollowCompany" data-id="18527891" data-counter="top">
-                </script>*@
-            <a href="https://www.instagram.com/akira_web_solutions/" title="our instagram">
-                <img src="~/Images/instagram_64x64.png" style="max-height:64px; max-width:64px; vertical-align:top;" alt="Instagram" />
-            </a>
-            <br />
-            <p>&copy; @DateTime.Now.Year - Akira Web Solutions. all websites made with CSS3, HTML5, C#, Javascript, and SQL. </p>
-            <br />
-
+                    <img src="~/Images/instagram_64x64.png" style="vertical-align:top;" alt="Instagram" />
+                </a>
+            </div>
 
         </div>
 
