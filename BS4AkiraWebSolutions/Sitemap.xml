@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>https://www.akirawebsolutions.com/</loc>
+	<lastmod>2020-01-17T18:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www.akirawebsolutions.com/TermsandConditions.cshtml</loc>
+	<lastmod>2020-01-17T18:16:04+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www.akirawebsolutions.com/PrivacyPolicy.cshtml</loc>
+	<lastmod>2020-01-17T18:16:06+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>

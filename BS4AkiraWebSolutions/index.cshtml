@@ -1,0 +1,959 @@
+﻿@{
+var today= DateTime.Today;
+var launch= new DateTime(2018,1,1);
+var hours= ((TimeSpan) (today - launch)).Days;
+}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-83806060-4');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Akira Web Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="Colorado Springs Web Design,
+Colorado Springs Web Designer,
+Colorado Springs Design and Development,
+Colorado Springs Web Design and Hosting,
+Colorado Springs Web Design And Development Services,
+Colorado Springs Web Design Company,
+Colorado Springs Web Design Services,
+Colorado Springs Web Design Cost,
+Web Design Colorado Springs,
+Web Design Denver,
+Web Design eCommerce,
+eCommerce web design" />
+    <meta name="author" content="Akira Web Solutions" />
+    <meta name="description" content="Akira Web Solutions is a Colorado web design company offering innovative, professional & mobile-friendly website design services." />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!--==========================
+      Header
+    ============================-->
+    <header id="header">
+        <div class="container-fluid">
+
+            <div id="logo" class="pull-left">
+                <h1><a href="#intro" class="scrollto">Akira Web Solutions</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                 <!--<a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="#intro">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    @*<li><a href="#team">Team</a></li>*@
+                    <!--<li class="menu-has-children">
+                        <a href="">Drop Down</a>
+                        <ul>
+                            <li><a href="#">Website Capabilities</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>-->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </header><!-- #header -->
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="intro">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active">
+                        <div class="carousel-background"><img src="img/intro-carousel/5.png" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Welcome to Akira Web Solutions</h2>
+                                <p>
+                                    Intelligent Website Development & Modern Design
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="img/intro-carousel/2.png" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Design</h2>
+                                <p>
+                                    We don’t believe in being just another web design company. We believe your website is the natural extension of your brand’s story that sets the tone for your online presence.
+
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="img/intro-carousel/3.png" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Development</h2>
+                                <p>When you’re choosing a site developer, you need someone you can trust to execute every aspect to the highest level of quality.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="img/intro-carousel/4.png" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Search Engine Optomization</h2>
+                                <p>All Akira Web Solutions websites are built so that search engines can read every word; making your website as 'visible' as possible. You won't notice the techie stuff we've done behind the scenes, but the search engine will.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="img/intro-carousel/5.png" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>User Experience / User Interface</h2>
+                                <p>
+                                    The best way to resonate with viewers and ensure on-site engagement is through a stand-out user experience (UX) complimented with a strong user interface (UI). UX and UI must go hand-in-hand to maximize user interactions.
+
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </section><!-- #intro -->
+
+    <main id="main">
+
+        <!--==========================
+          Featured Services Section
+        ============================-->
+        <section id="featured-services">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 box">
+                        <i class="ion-ios-bookmarks-outline"></i>
+                        <h4 class="title">Custom Website Development</h4>
+                        <p class="description">Akira Web Solutions believes that everyone deserves a great website. We are a web design team who will build a stunning, virtual creation of your business idea.</p>
+                    </div>
+
+                    <div class="col-lg-4 box box-bg">
+                        <i class="ion-ios-stopwatch-outline"></i>
+                        <h4 class="title">Search Engine Optimization</h4>
+                        <p class="description">We ensure all our websites are built so that search engines can read every word, so your website is as 'visible' as possible.</p>
+                    </div>
+
+                    <div class="col-lg-4 box">
+                        <i class="ion-ios-heart-outline"></i>
+                        <h4 class="title">Responsive Website Design </h4>
+                        <p class="description">We make your website 100% visible on all of today’s devices including smartphones, tablets, televisions, and monitors of all sizes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- #featured-services -->
+        <!--==========================
+          About Us Section
+        ============================-->
+        <section id="about">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>About Us</h3>
+                    <p>
+                        At Akira Web Solutions, we're a small but highly experienced team. We love what we do and put our hearts and souls into every project. We are dedicated to ensuring every client receives 100% of our creativity. Our expertise covers all aspects of website design and development, including the look, the functions, the text, all the techie stuff, and that spark of inspiration that makes your project as unique as the idea. For expert website building, hosting, SEO and SSL services call us first!
+
+                    </p>
+                </header>
+
+                <div class="row about-cols">
+
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="img/about-mission.png" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                            </div>
+                            <h2 class="title">Our Mission</h2>
+                            <p>
+                                Akira Web Solutions is a Colorado Springs website design company that creates professional, clean and creative websites for businesses. From the very beginning, our websites have offered high standards in usability, design, and functionality. It has always been our goal to deliver our clients' first-class websites at competitive prices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="img/about-plan.png" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                            </div>
+                            <h2 class="title">Our Plan</h2>
+                            <p>
+                                We are a web design team that will build a stunning, virtual creation of your business idea. We listen to your needs, suggest solutions, and develop a website that meets your present and future needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="img/about-vision.png" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                            </div>
+                            <h2 class="title">Our Vision</h2>
+                            <p>
+                                We'll create an eye-catching website that reflects your business, meets the needs of your clients, promoting your products or services 24/7/365.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- #about -->
+        <!--==========================
+          Services Section
+        ============================-->
+        <section id="services">
+            <div class="container">
+
+                <header class="section-header wow fadeInUp">
+                    <h3>Services</h3>
+                    <p>
+                        Whether you're a start-up on the verge of something great or an established business looking for a refresh, our full-service capabilities will allow you to reimagine the way you do digital.
+                    </p>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                        <h4 class="title">Design</h4>
+                        <p class="description">We don’t believe in being just another web design company. We believe your website is the natural extension of your brand’s story that sets the tone for your online presence.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+                        <h4 class="title">Development</h4>
+                        <p class="description">When you’re choosing a site developer, you need someone you can trust to execute every aspect to the highest level of quality.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+                        <h4 class="title">Support &amp; Hosting</h4>
+                        <p class="description">We take care of the technical stuff, so you can focus on the fun stuff. Our ongoing website support and maintenance services provide a resource for any technical issue that may arise for your business.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                        <h4 class="title">SEO</h4>
+                        <p class="description">All Akira Web Solutions websites are built so that search engines can read every word; making your website as 'visible' as possible. You won't notice the techie stuff we've done behind the scenes, but the search engine will.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
+                        <h4 class="title">Security</h4>
+                        <p class="description">
+                            SSL certifications are used to secure credit card transactions, data transfer, and logins, and more recently is becoming the norm when securing browsing of social media sites.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="icon"><i class="ion-ios-people-outline"></i></div>
+                        <h4 class="title">User Experience / User Interface</h4>
+                        <p class="description">The best way to resonate with viewers and ensure on-site engagement is through a stand-out user experience (UX) complimented with a strong user interface (UI). UX and UI must go hand-in-hand to maximize user interactions.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- #services -->
+        <!--==========================
+          Call To Action Section
+        ============================-->
+        <section id="call-to-action" class="wow fadeIn">
+            <div class="container text-center">
+                <h3>Don't Wait!</h3>
+                <p>
+                    Knowing how to grow your business online is only a click away!
+                </p>
+                <a class="cta-btn" href="#contact">GET A FREE CONSULTATION</a>
+            </div>
+        </section><!-- #call-to-action -->
+        <!--==========================
+          Skills Section
+        ============================-->
+        <section id="skills">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Our Skills</h3>
+                    <p>We link together the world of design and technology, packaging up the utility of the back-end in an inviting way for users to interact with.</p>
+                </header>
+
+                <div class="skills-content">
+
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">HTML <i class="val">100%</i></span>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">CSS <i class="val">90%</i></span>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">JavaScript <i class="val">75%</i></span>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">Graphic Design <i class="val">55%</i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--==========================
+          Facts Section
+        ============================-->
+        <section id="facts" class="wow fadeIn">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Facts</h3>
+                    <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
+                </header>
+
+                <div class="row counters">
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">26</span>
+                        <p>Clients</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">52</span>
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">@hours</span>
+                        <p>Hours Of Support</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">5</span>
+                        <p>Hard Workers</p>
+                    </div>
+
+                </div>
+
+                <div class="facts-img">
+                    <img src="img/facts-img.png" alt="" class="img-fluid">
+                </div>
+
+            </div>
+        </section><!-- #facts -->
+        <!--==========================
+          Portfolio Section
+        ============================-->
+        <section id="portfolio" class="section-bg">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3 class="section-title">Our Portfolio</h3>
+                </header>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-info">Informational</li>
+                            <li data-filter=".filter-ecom">Ecommerce</li>
+                            <li data-filter=".filter-demo">Demo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ecom wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/1CatchyEyes.png" class="img-fluid" alt="">
+                                <a href="img/portfolio/1CatchyEyes.png" data-lightbox="portfolio" data-title="ecom1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>Catchy Eyes</h4>
+                                <p>Ecommerce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ecom wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="img/portfolio/2SouthWest.png" class="img-fluid" alt="">
+                                <a href="img/portfolio/2SouthWest.png" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>South West Seas</h4>
+                                <p>Ecommerce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ecom wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="img/portfolio/3Jazzy.png" class="img-fluid" alt="">
+                                <a href="img/portfolio/3Jazzy.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://www.jazzycheesecakes.com" class="link-details" title="More Details"target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://www.jazzycheesecakes.com"target="_blank">Jazzy Cheesecakes</a></h4>
+                                <p>Ecommerce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-info wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/4PetSitting.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/4PetSitting.png" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://phoenix-pet-sitting.com/" class="link-details" title="More Details"target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://phoenix-pet-sitting.com/"target="_blank">Phoenix Pet Sitting</a></h4>
+                                <p>Informational</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ecom wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/5Cake.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/5Cake.png" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://www.cakedepotnc.com" class="link-details" title="More Details"target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://www.cakedepotnc.com"target="_blank">Cake Depot NC</a></h4>
+                                <p>Ecommerce</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-info wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/6Plumbing.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/6Plumbing.png" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="http://www.bishopfineplumbing.com" class="link-details" title="More Details"target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="http://www.bishopfineplumbing.com"target="_blank">Bishop Fine Plumbing</a></h4>
+                                <p>Informational</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-info wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/7Sugar.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/7Sugar.png" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>Pet Gliders</h4>
+                                <p>Informational</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-info wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/8AllHearts.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/8AllHearts.png" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview" ><i class="ion ion-eye"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>All Hearts Together</h4>
+                                <p>Informational</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-demo wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/9CarRental.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/9CarRental.png" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://bs4carrentaldemo2020.azurewebsites.net/" class="link-details" title="More Details" target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://bs4carrentaldemo2020.azurewebsites.net/" target="_blank">Car Rental Demo</a></h4>
+                                <p>Demo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-info wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/10Papa.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/10Papa.png" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://papadueceski2020.azurewebsites.net/" class="link-details" title="More Details" target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://papadueceski2020.azurewebsites.net/" target="_blank">Papa Dueceski</a></h4>
+                                <p>Gallery</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-demo wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/11RealEstate.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/11RealEstate.png" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="https://realestatedemo2020.azurewebsites.net/" class="link-details" title="More Details" target="_blank"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="https://realestatedemo2020.azurewebsites.net/" target="_blank">Real Estate Demo</a></h4>
+                                <p>Demo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-demo wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <img src="~/img/Portfolio/12Legal.png" class="img-fluid" alt="">
+                                <a href="~/img/Portfolio/12Legal.png" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>Legal Demo</h4>
+                                <p>Demo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- #portfolio -->
+        <!--==========================
+          Clients Section
+        ============================-->
+        <section id="clients" class="wow fadeInUp">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Our Clients</h3>
+                </header>
+
+                <div class="owl-carousel clients-carousel">
+                    <img src="~/img/clients/client-1.png" alt="">
+                    <img src="~/img/clients/client-2.png" alt="">
+                    <!--<img src="~/img/clients/client-3.png" alt="">-->
+                    <!--<img src="~/img/clients/client-4.png" alt="">-->
+                    <img src="img/clients/client-5.png" alt="">
+                    <img src="img/clients/client-6.png" alt="">
+                    <img src="img/clients/client-7.png" alt="">
+                    <img src="img/clients/client-8.png" alt="">
+                    <img src="~/img/clients/Client-9.png" alt="">
+                    <img src="~/img/clients/Client-10.png" alt="">
+                </div>
+
+            </div>
+        </section><!-- #clients -->
+        <!--==========================
+          Clients Section
+        ============================-->
+        <!--<section id="testimonials" class="section-bg wow fadeInUp">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Testimonials</h3>
+                </header>
+
+                <div class="owl-carousel testimonials-carousel">
+
+                    <div class="testimonial-item">
+                        <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+                        <h3>Sara Wilsson</h3>
+                        <h4>Designer</h4>
+                        <p>
+                            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+                        <h3>Jena Karlis</h3>
+                        <h4>Store Owner</h4>
+                        <p>
+                            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <p>
+                            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
+                        <h3>John Larson</h3>
+                        <h4>Entrepreneur</h4>
+                        <p>
+                            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>--><!-- #testimonials -->
+        <!--==========================
+          Team Section
+        ============================-->
+        @*<section id="team">
+            <div class="container">
+                <div class="section-header wow fadeInUp">
+                    <h3>Team</h3>
+                    <p>At Akira Web Solutions, we're a small but highly experienced team. We love what we do and put our heart and souls into every project.</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 wow fadeInUp">
+                        <div class="member">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Taylor Bishop</h4>
+                                    <span>Owner</span>
+                                    <div class="social">
+                                        <a href="https://twitter.com/Akira_WebDev" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.facebook.com/AkiraWebSolutions/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/akira_web_solutions/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/taylorbishop/" target="_blank"><i class="fa fa-linkedin"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="member">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Chris Kennedy</h4>
+                                    <span>Developer</span>
+                                    <div class="social">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="member">
+                            <img src="img/team-3.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Duncan Martin</h4>
+                                    <span>Graphic Design</span>
+                                    <div class="social">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="member">
+                            <img src="img/team-4.jpg" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Summer Bishop</h4>
+                                    <span>UX/UI</span>
+                                    <div class="social">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>*@<!-- #team -->
+        <!--==========================
+          Contact Section
+        ============================-->
+        <section id="contact" class="section-bg wow fadeInUp">
+            <div class="container">
+
+                <div class="section-header">
+                    <h3>Contact Us</h3>
+                    <p>Let's Talk</p>
+                </div>
+
+                <div class="row contact-info">
+
+                    <!--<div class="col-md-4">
+                      <div class="contact-address">
+                        <i class="ion-ios-location-outline"></i>
+                        <h3>Address</h3>
+                        <address>A108 Adam Street, NY 535022, USA</address>
+                      </div>
+                    </div>-->
+
+                    <div class="col-md-4">
+                        <div class="contact-phone">
+                            <i class="ion-ios-telephone-outline"></i>
+                            <h3>Phone Number</h3>
+                            <p><a href="tel:+16027771105">+1 602 777 1105</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="contact-email">
+                            <i class="ion-ios-email-outline"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@example.com">akirawebsolutions0@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="https://formspree.io/akirawebsolutions0@gmail.com" method="post" role="form" class="contactForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+        </section><!-- #contact -->
+
+    </main>
+
+    <!--==========================
+      Footer
+    ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Akira Web Solutions</h3>
+                        <p>Intelligent Website Development &amp; Modern Design</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-right"></i> <a href="#intro" class="scrollto">Home</a></li>
+                            <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="scrollto">About us</a></li>
+                            <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="scrollto">Services</a></li>
+                            <li><i class="ion-ios-arrow-right"></i> <a href="~/TermsandConditions.cshtml">Terms of service</a></li>
+                            <li><i class="ion-ios-arrow-right"></i> <a href="~/PrivacyPolicy.cshtml">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            <strong>Phone:</strong> +1 602 777 1105<br>
+                            <strong>Email:</strong> Akirawebsolutions0@gmail.com<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="https://twitter.com/Akira_WebDev" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/AkiraWebSolutions/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/akira_web_solutions/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                    <!--<div class="col-lg-3 col-md-6 footer-newsletter">
+                      <h4>Our Newsletter</h4>
+                      <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                      <form action="" method="post">
+                        <input type="email" name="email"><input type="submit"  value="Subscribe">
+                      </form>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>Akira Web Solutions</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://AkiraWebSolutions.com/">Akira Web Solutions</a>
+            </div>
+        </div>
+    </footer><!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    @*<script src="contactform/contactform.js"></script>*@
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
